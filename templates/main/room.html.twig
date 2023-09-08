@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<div class="container"> 
+{% for item in chambres %}
+      <div class="my-3 border border-primary rounded p-4 row">
+            <div class="col-4"><img src="{{ asset('uploads/img/' ~ item.photo)}}" alt="Photo de la chambres" class="img-fluid"></div>
+            <div class="col-8">
+                <h2>{{item.titre}}</h2>
+                <p>{{item.descriptionCourte | raw}}</p>
+        
+                 <h3 class="text-end">{{item.prixJournalier}}€</h3>
+
+            </div>
+        
+          {# {{ dump(asset('uploads/img/' ~ item.photo)) }} #}
+      </div>
+{% endfor %}
+</div>
+
+{% endblock %}

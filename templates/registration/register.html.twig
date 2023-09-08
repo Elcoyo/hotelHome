@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    
+<h1>Inscription</h1>
+
+<div class="flex-container ">
+    {{ form_start(registrationForm) }}
+    <div>
+    {{ form_errors(registrationForm) }}
+    </div>
+    <div class="row">
+        <div class="col">
+        {{ form_row(registrationForm.email, { label: 'E-mail'}) }}
+        </div>
+    <div class="col">
+        {{ form_row(registrationForm.pseudo, { label: 'Pseudo'}) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.nom, { label: 'Nom de famille'}) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.prenom, { label: 'Prénom'}) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.civilite, {label: 'Civilité'}) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.ville) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.adresse , { label: 'Adresse'}) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.codePostal, { label: 'Code postale', }) }}
+        </div>
+        <div class="col">
+        {{ form_row(registrationForm.password, {
+            label: 'Mot de passe'
+        }) }}
+        </div>
+        {{ form_row(registrationForm.agreeTerms, { label: 'Accepter'}) }}
+
+    </div>
+        <button type="submit" class="btn">S'inscrire </button>
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}

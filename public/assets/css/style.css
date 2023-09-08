@@ -1,0 +1,25 @@
+body {
+    background-color: antiquewhite;
+    background-image: none;
+    color: black;
+
+}
+
+h1 {
+    font-size: 250%;
+    color: slateblue;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.flex-container{
+
+    display: block;
+    flex-direction: column;
+}
+
+.navbar-dark, .navbar[data-bs-theme=dark]{
+    --bs-navbar-color: black;
+    --bs-navbar-active-color: red;
+    --bs-navbar-brand-color: green; 
+}
